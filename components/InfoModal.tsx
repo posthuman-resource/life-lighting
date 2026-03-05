@@ -28,6 +28,24 @@ export default function InfoModal({ open, onClose }: InfoModalProps) {
           &times;
         </button>
 
+        <h2>Why This Matters</h2>
+        <p>
+          No one designed these replicators. No fitness function selects for them.
+          Mutation is not even required for them to appear. Random programs,
+          interacting through a simple mechanism, give rise to self-replicating
+          entities purely through the dynamics of computation itself. This suggests
+          that self-replication is not a special property that needs to be
+          carefully engineered. It may be a natural, almost inevitable consequence
+          of computational interactions.
+        </p>
+        <p>
+          If random programs in a digital soup can spontaneously begin to
+          replicate, the same principle may help explain how molecular
+          self-replicators first arose in Earth&apos;s prebiotic chemistry. The boundary
+          between &quot;living&quot; and &quot;non-living&quot; may be better understood as a phase
+          transition in computational systems rather than a hard categorical line.
+        </p>
+
         <h2>What You Are Seeing</h2>
         <p>
           A primordial soup of 131,072 random programs. Each 8x8 block on screen
@@ -36,6 +54,22 @@ export default function InfoModal({ open, onClose }: InfoModalProps) {
           single tape, executed, and split back apart. Over thousands of epochs,
           self-replicating programs spontaneously emerge from this random noise
           with no design, no fitness function, and no selection pressure.
+        </p>
+
+        <h2>What to Expect</h2>
+        <p>
+          Self-replicators typically emerge between epochs 1,000 and 5,000. At
+          the current simulation speed, that translates to roughly 8 to 40
+          minutes of running time. About 40% of runs produce replicators within
+          16,000 epochs. The other 60% may simply need more time, or a different
+          random starting configuration. If nothing has emerged after a long run,
+          try reloading the page for a fresh random seed.
+        </p>
+        <p>
+          When a replicator does emerge, you will know. The soup will undergo a
+          dramatic, visible phase transition: a wave of uniform color will sweep
+          across the display as the replicator copies itself into every program it
+          encounters.
         </p>
 
         <h2>How BFF Works</h2>
@@ -78,30 +112,14 @@ export default function InfoModal({ open, onClose }: InfoModalProps) {
 
         <h2>What Happens During an Interaction</h2>
         <p>
-          Two programs (A and B) are chosen at random. They are joined end to end
-          into a single 128-byte tape. The BFF interpreter runs on this combined
-          tape for up to 8,192 steps. Then the tape is split back into two 64-byte
-          halves, which replace the originals in the soup. If A contains a
-          self-replicator, it may overwrite B with a copy of itself. After
-          splitting, both halves are now copies of the replicator.
-        </p>
-
-        <h2>Why This Matters</h2>
-        <p>
-          No one designed these replicators. No fitness function selects for them.
-          Mutation is not even required for them to appear. Random programs,
-          interacting through a simple mechanism, give rise to self-replicating
-          entities purely through the dynamics of computation itself. This suggests
-          that self-replication is not a special property that needs to be
-          carefully engineered. It may be a natural, almost inevitable consequence
-          of computational interactions.
-        </p>
-        <p>
-          If random programs in a digital soup can spontaneously begin to
-          replicate, the same principle may help explain how molecular
-          self-replicators first arose in Earth&apos;s prebiotic chemistry. The boundary
-          between &quot;living&quot; and &quot;non-living&quot; may be better understood as a phase
-          transition in computational systems rather than a hard categorical line.
+          Two programs (A and B) are chosen at random from all 131,072 in the
+          soup. They are joined end to end into a single 128-byte tape. The BFF
+          interpreter runs on this combined tape for up to 8,192 steps. Then the
+          tape is split back into two 64-byte halves, which replace the originals.
+          Each epoch consists of 65,536 such interactions, so on average every
+          program participates once per epoch. If A contains a self-replicator, it
+          may overwrite B with a copy of itself. After splitting, both halves are
+          now copies of the replicator.
         </p>
 
         <h2>Credits</h2>
